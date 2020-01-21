@@ -1,0 +1,4 @@
+commonLabels:
+  app: hello-world
+resources:
+  - deployment.yaml

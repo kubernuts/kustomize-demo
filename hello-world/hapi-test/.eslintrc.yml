@@ -1,0 +1,52 @@
+root: true
+env:
+  node: true
+extends:
+  - prettier
+  - airbnb
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+  - prettier/@typescript-eslint
+parser: "@typescript-eslint/parser"
+parserOptions: 
+  project: ./tsconfig.json
+  sourceType: module
+plugins:
+  - import
+  - "@typescript-eslint"
+settings:
+  import/extensions:
+    - .js
+    - .ts
+  import/resolver: 
+    # this loads <rootdir>/tsconfig.json to eslint
+    typescript:
+      extensions: [".ts", ".tsx"]
+    node:
+      extensions: [".js", ".jsx"]
+  import/parsers: 
+    "@typescript-eslint/parser":
+      - .ts
+      - .tsx
+rules: 
+  no-shadow:
+  - off
+  no-console:
+  - off
+  prefer-const: 
+    - error 
+    - destructuring: "all"
+  prettier/prettier:
+    - error
+  "@typescript-eslint/indent": [2,2]
+  import/extensions: 
+    - error
+    - ignorePackages
+    - js: never
+      jsx: never
+      ts: never
+      tsx: never
