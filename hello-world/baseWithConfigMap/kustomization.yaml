@@ -7,3 +7,7 @@ configMapGenerator:
 - name: foo
   files: 
   - foo.txt 
+- name: with-literals
+  literals: 
+  - foo=bar
+  - other=stuff

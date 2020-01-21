@@ -21,6 +21,9 @@ spec:
       containers:
         - name: hapi
           image: darkspark/hapi-test-kubernuts
+          envFrom:
+            - configMapRef:
+                name: with-literals
           volumeMounts:
             - mountPath: /foo
               name: foo
