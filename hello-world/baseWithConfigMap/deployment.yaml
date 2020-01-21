@@ -14,7 +14,15 @@ spec:
       labels:
         app: echo-server
     spec:
+      volumes:
+        - name: foo
+          configMap:
+            name: foo
       containers:
         - name: hapi
           image: darkspark/hapi-test-kubernuts
+          volumeMounts:
+            - mountPath: /foo
+              name: foo
+
 

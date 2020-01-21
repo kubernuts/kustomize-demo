@@ -1,3 +1,6 @@
 commonLabels:
   environment: development
-resources:
+bases:
+  - ../base
+patches:
+  - ./deployment.yaml

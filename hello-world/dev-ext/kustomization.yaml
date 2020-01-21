@@ -1,0 +1,4 @@
+bases:
+  - ../development
+commonLabels:
+  foo: I-AM-EXTENDED
