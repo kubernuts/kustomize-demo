@@ -10,7 +10,7 @@
     "deploy-image": "npm run lint && npm run compile && docker build . -t darkspark/hapi-test-kubernuts && docker push darkspark/hapi-test-kubernuts"
   },
   "dependencies": {
-    "@hapi/hapi": "^19.0.5",
+    "@hapi/hapi": "^19.1.1",
     "axios": "^0.19.1"
   },
   "devDependencies": {
